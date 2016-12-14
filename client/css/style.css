@@ -5,15 +5,23 @@ body,html
 	background: #333;
 	font-family: sans-serif;
 }
-.login-form
-{ 
-	background: #fff;
+
+.container
+{
+	background: #FFF;
 	padding: 20px;
 	width: 100%;
-	max-width: 300px;
-	margin:100px auto;
+	max-width: 1280px;
 	border-radius: 5px;
+	margin: 20px auto;
 }
+
+.login-form
+{ 
+	max-width: 300px;
+	margin: 100px auto;
+}
+
 .login-form #user,.login-form #password
 {
 	padding: 10px;
@@ -22,6 +30,7 @@ body,html
 	width: 100%;
 	box-sizing: border-box;
 }
+
 .login-form #login-btn
 {
 	padding: 10px;
@@ -34,9 +43,44 @@ body,html
 	border: none;
 	border-radius: 3px;
 }
+
 .login-form #login-btn:hover
 {
 	background: #3df;
 }
 
+/**************************/
 
+.agent-list
+{
+	list-style: none;
+	padding: 0;
+}
+
+.agent-list a
+{
+	text-decoration: none;
+	color: #555;
+	display: block;
+	padding: 10px 20px;
+	border-bottom: 1px solid #CCC;
+}
+
+.agent-list a:hover
+{
+	background-color: #EEE;
+}
+
+.agent-list li:last-child a
+{
+	border-bottom: none;
+}
+
+.agent-list li .matricule
+{
+	width: 18%;
+	display: inline-block;
+	text-align: right;
+	margin-right: 20px;
+	color: #999;
+}
