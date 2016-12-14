@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dépot</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="agent-title"></div>
-		
+	<div class="agent-content">
+		<div class="agent-header">
+			<h1>Agent :</h1>
+			<div class="mat">
+				<strong>Matricule :</strong>
+				<span>XXXX</span>
+			</div>
+			<div class="name">
+				<strong>Nom :</strong>
+				<span>XXX</span>
+			</div>
+		</div>
+		<div class="agent-body">
+			<h1>Etat de congie maladie de court durée :</h1>
+			<div class="debut">
+				<strong>Debut de l'année courante :</strong>
+				<span>XXX</span>
+			</div>
+			<div class="jour">
+				<strong>Jours de congie de l'année courant : </strong>
+				<span>XXX</span>
+			</div>
+			<div class="progress-bar"></div>
+		</div>
+		<div class="agent-footer">
+			<h1>Dépot de certificat :</h1>
+			<form>
+				<div class="input">
+					<label for="date">Date effet :</label>
+					<input type="date" name="date">
+				</div>
+				<div class="input">
+					<label for="medecin">Medcin homologues :</label>
+					<input type="text" name="medecin">
+				</div>
+				<div class="input">
+					<label for="duree">Durée :</label>
+					<input type="number" name="duree">
+				</div>
+				<div class="input">
+					<label for="certificat">Certificat :</label>
+					<input type="file" name="certificat">
+				</div>
+				<div class="btns">
+					<input type="reset" value="Annuler">
+					<input type="submit" value="Continuer">
+				</div>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
