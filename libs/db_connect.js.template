@@ -1,0 +1,16 @@
+var
+  single_connection,
+  knex = require('knex')({
+    client: 'mysql',
+    connection: { host: 'localhost', port:'8889',user: 'root',password: 'root',database: 'TestDBConge',charset: 'utf8'}
+  });
+
+module.exports = function() {
+
+  if(!single_connection){
+
+    single_connection = require('bookshelf')(knex);
+  }
+  return single_connection;
+};
+//DBCongeMaladie

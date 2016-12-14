@@ -1,0 +1,10 @@
+// Update with your config settings.
+
+module.exports = {
+
+  development: {
+    client: 'mysql',
+    connection: { host: 'localhost', port:'8889',user: 'root',password: 'root',database: 'TestDBConge',charset: 'utf8'}
+  }
+
+};
