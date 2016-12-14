@@ -3,33 +3,18 @@
 <head>
     <title>Selection d'agent</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Veuillez selectionner un agent</h1>
-        <ul class="agent-list">
-            <li class="agent-item">
+        <ul class="agent-list" ng-app="myApp" ng-controller="myCtrl">
+            <li class="agent-item" ng-repeat="a in agents">
                 <a href="#">
-                    <span class="matricule">AO1234</span>
-                    <span class="name">Mohamed Elhossayny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="matricule">AO1131</span>
-                    <span class="name">Jairo Duarte</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="matricule">AO5233</span>
-                    <span class="name">Dermoumi Said</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="matricule">AO1231</span>
-                    <span class="name">Abdeneby Ibrahim</span>
+                    <span class="matricule">{{ a.matricule }}</span>
+                    <span class="name">{{ a.nom }}</span>
                 </a>
             </li>
         </ul>
