@@ -1,13 +1,20 @@
 var app = angular.module("myApp",[]);
 
 app.controller("agentList",function($scope,$http){
-	$scope.agents=[{"matricule":"ID83948","nom":"Mohamed El hosayny"},{"matricule":"AO3489","nom":"Jairo Duart"},{"matricule":"I45324","nom":"Dermoumi Said"},{"matricule":"B432442","nom":"Abdeneby Brahim"}];
+	$http.get("http://192.168.1.33:3000/api/agents")
+		.then(function(response){
+			$scope.agents =response.data;	
+		});
+	//$scope.agents=[{"matricule":"ID83948","nom":"Mohamed El hosayny"},{"matricule":"AO3489","nom":"Jairo Duart"},{"matricule":"I45324","nom":"Dermoumi Said"},{"matricule":"B432442","nom":"Abdeneby Brahim"}];
 });
 
 app.controller("agentOperationSup",function($scope){
-        $scope.agents=[{"matricule":"ID83948","nom":"Mohamed El hosayny"},{"matricule":"AO3489","nom":"Jairo Duart"},{"matricule":"I45324","nom":"Dermoumi Said"},{"matricule":"B432442","nom":"Abdeneby Brahim"}];
+        $http.get("http://192.168.1.33:3000/api/congemcds")
+		.then(function(response){
+			$scope.congemcds =response.data.data;	
+		});
 });
 
 app.controller("agentOperationRh",function($scope){
-        $scope.agent s=[{"matricule":"ID83948","nom":"Mohamed El hosayny"},{"matricule":"AO3489","nom":"Jairo Duart"},{"matricule":"I45324","nom":"Dermoumi Said"},{"matricule":"B432442","nom":"Abdeneby Brahim"}];
+        $scope.agents=[{"matricule":"ID83948","nom":"Mohamed El hosayny"},{"matricule":"AO3489","nom":"Jairo Duart"},{"matricule":"I45324","nom":"Dermoumi Said"},{"matricule":"B432442","nom":"Abdeneby Brahim"}];
 });

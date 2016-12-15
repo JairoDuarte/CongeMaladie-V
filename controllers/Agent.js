@@ -6,7 +6,7 @@ module.exports = function(app) {
       AgentDB.forge()
       .fetchAll()
       .then(function (collection) {
-        res.json({error:false, data: collection.toJSON()});
+        res.json(collection.toJSON());
       })
       .otherwise(function (err) {
         res.status(500).json({error:true, message:err.message});
