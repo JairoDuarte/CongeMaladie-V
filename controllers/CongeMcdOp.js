@@ -1,16 +1,10 @@
 module.exports = function(app) {
 
-  var DB = app.models.CongeMcdOp;
+  var model=app.models.CongeMcdOp,
+      DB =model.Model;
   var AgentController = {
     getAll: function (req,res) {
-      DB.forge()
-      .fetchAll()
-      .then(function (collection) {
-        res.json({error:false, data: collection.toJSON()});
-      })
-      .otherwise(function (err) {
-        res.status(500).json({error:true, message:err.message});
-      });
+      model.GetAll(req,res);
     },
     add:function (req,res) {
       console.log(req.body);
