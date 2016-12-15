@@ -1,5 +1,5 @@
 module.exports= function(app) {
-    var agent =app.controllers.Etudiant;
+    var agent =app.controllers.Agents;
 
     app.get('/api/agent/:id',agent.getById);
     app.get('/api/agents',agent.getAll);
