@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dépot</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="agent-form">
+            <div class="agent-header">
+                <h1>Agent :</h1>
+                <div class="header-content">
+                        <div class="mat">
+                        <strong>Matricule :</strong>
+                        <span>XXXX</span>
+                    </div>
+                    <div class="name">
+                        <strong>Nom :</strong>
+                        <span>XXX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="agent-body">
+                <h1>État de congie maladie de courte durée :</h1>
+                <div class="body-content">
+                    <div class="debut">
+                        <strong>Début de l'année courante :</strong>
+                        <span>XXX</span>
+                    </div>
+                    <div class="jour">
+                        <strong>Jours de congé de l'année courante : </strong>
+                        <span>XXX</span>
+                    </div>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="agent-footer">
+                <h1>Dépot de certificat :</h1>
+                <div class="input">
+                    <label for="date">Date effet :</label>
+                    <input type="date" name="date">
+                </div>
+                <div class="input">
+                    <label for="medecin">Médecin homologue :</label>
+                    <input type="text" name="medecin">
+                </div>
+                <div class="input">
+                    <label for="duree">Durée (jours) :</label>
+                    <input type="number" name="duree">
+                </div>
+                <div class="input">
+                    <label for="certificat">Certificat :</label>
+                    <input type="file" name="certificat">
+                </div>
+            </div>
+            <div class="agent-decision-sup">
+                <h1>Décision supérieur :</h1>
+                <div class="input">
+                    <label for="avis">Avis :</label>
+                    <textarea id="avis" name="avis"></textarea>
+                </div>
+                <div class="input">
+                    <label for="medecin">Rapport :</label>
+                    <textarea id="medecin" name="medecin"></textarea>
+                </div>
+            </div>
+            <div class="form-btns">
+                <input type="reset" value="Annuler">
+                <input type="submit" value="Continuer">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -49,11 +49,11 @@ body,html
 	background: #3df;
 }
 
-.agent-footer
+.agent-form
 {
 	overflow: hidden;
 }
-.agent-footer .input input
+.agent-form .input input
 {
 	padding: 10px;
 	margin: 10px 0;
@@ -62,36 +62,57 @@ body,html
 	width: 100%;
 	box-sizing: border-box;
 }
-.agent-footer .input
+.agent-form .input
 {
 	width: 50%;
-	height: 100px;
+	/*height: 100px;*/
 	padding: 10px;
 	float:left;
 	box-sizing: border-box;
 }
-.agent-footer .btns
+.agent-form textarea
 {
-	clear: both;
-	float: right;
+	display: block;
+	width: 100%;
+	height: 100px;
 }
-.agent-footer .btns input
+.agent-footer::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.agent-decision-sup
+{
+	overflow: hidden;
+}
+.form-btns
+{
+	margin-top: 20px;
+	text-align: right;
+}
+.form-btns input
 {
 	padding: 10px;
 	margin: 0px 10px;
-	display: block;
+	display: inline-block;
 	width: 150px;
-	float: left;
 	background: #1cf;
 	box-sizing: border-box;
 	color: #fff;
 	border: none;
 	border-radius: 3px;
 }
-.agent-footer .btns input:hover
+.form-btns input:hover
 {
 	background: #3df;
 }
+.form-btns::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
 .agent-body .body-content 
 {
 	overflow: hidden;
@@ -104,7 +125,6 @@ body,html
 	padding: 20px;
 	box-sizing: border-box;
 }
-/**************************/
 
 .agent-list
 {
