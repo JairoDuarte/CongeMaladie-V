@@ -2,3 +2,4 @@ node_modules
 libs/db_connect.js
 knexfile.js
 client/mongoose.exe
+npm-debug.log
