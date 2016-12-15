@@ -3,7 +3,7 @@ module.exports = function(app) {
 
   var AgentDB = app.models.Agent;
 
-  var AgentController = {
+  var AgentsController = {
     getAll: function (req,res) {
 
     },
