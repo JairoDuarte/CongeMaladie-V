@@ -1,7 +1,6 @@
 module.exports = function(app) {
-  var db = require('../libs/db_connect')();
-
   var AgentDB = app.models.Agent;
+
   var AgentController = {
     getAll: function (req,res) {
       AgentDB.forge()
