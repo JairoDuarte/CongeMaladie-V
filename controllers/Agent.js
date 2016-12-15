@@ -2,7 +2,6 @@ module.exports = function(app) {
   var db = require('../libs/db_connect')();
 
   var AgentDB = app.models.Agent;
-
   var AgentController = {
     getAll: function (req,res) {
       AgentDB.forge()
@@ -65,7 +64,6 @@ module.exports = function(app) {
       .catch(function (err) {
         res.status(500).json({error:true, message:err.message});
       });
-
     },
     delete:function (req,res) {
       AgentDB.forge({Matricule: req.params.id})
